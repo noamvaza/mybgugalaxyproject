@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>My Galaxy</title>
+	<link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="shortcut icon" href="http://cdn.flaticon.com/png/256/41997.png">
+</head>
+<body>
+    <div id="fb-root"></div>
+	<div style="width:100%;">
+        
+        <div>
+            <div id="log" style="float:left; border:2px solid #999; overflow:overlay; font-size:10px;" ></div>
+            <canvas id="viewport" ></canvas>
+        </div>
+
+        <div id="controls" >
+            <div id="buttons" style="display: none;" >
+                <span onClick="addFriends()" >Add</span> <input type="number" id="addFri" value="100" /> <span onClick="addFriends()" >Friends</span> | 
+                <span onClick="addConnections()" >Add Arcs</span> | 
+                <span onClick="highlight(); $('#hidehighlights').show();" >Highlight more than </span>
+                    <input id="highlight" type="number" value="5" />
+                <span onClick="highlight(); $('#hidehighlights').show();" > Connections</span> | 
+                <span onClick="removeHighlights(); $(this).hide();" id="hidehighlights" style="display: none;" > Remove Highlights</span>
+                <br>
+                <span onClick="removeMe(); showNhide('addme', this);" id="hideme" >Remove Me</span>
+                <span onClick="addMe(); showNhide('hideme', this);" id="addme" style="display: none;" >Add Me</span> | 
+                <span onClick="removeLonlyFriends()" >Remove Nodes with less than </span>
+                    <input id="connections" type="number" value="1" />
+                <span onClick="removeLonlyFriends()" > Arcs</span> | 
+
+            </div>
+            <div id="fbLogin"
+                class="fb-login-button" 
+                onlogin="location.reload();"
+                data-max-rows="1" data-size="small" data-show-faces="false" data-auto-logout-link="true">
+            </div>
+            <div id="credits">
+                <h2>| My BGU Galaxy Project</h2>
+                <h3>| By: Noam Vaza</h3>
+            </div>
+        </div>        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+                
+        <!-- run from the minified library file: -->
+        <script src="arbor.js"></script>  
+        
+        <script src="main.js"></script>
+
+        <script src="fb.js"></script>
+       
+	</div>
+</body>
+</html>

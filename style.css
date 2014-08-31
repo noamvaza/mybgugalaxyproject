@@ -1,0 +1,32 @@
+body{
+  margin:0;
+  padding:5px;
+  font:12px/17px Arial, sans-serif;
+  background:#f9f9f9;
+}
+span{
+    cursor: pointer;
+    color: blue;
+    padding: 5px
+}
+span:hover{
+    color: brown;
+}
+#connections, #addFri, #highlight{
+    width: 35px;
+}
+
+#controls{
+    border:2px solid #333; width:100%;
+    width:100%;
+}
+
+#buttons, #fbLogin{
+    float: left;
+    width: 70%;
+}
+#credits {
+    float: right;
+    width: 30%;
+}
+
